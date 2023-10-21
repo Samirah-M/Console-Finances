@@ -16,8 +16,6 @@ The greatest decrease in Profit/Losses (date and amount) over the entire period.
 
 When you open your code in the browser your resulting analysis should look similar to the following:
 
-Financial Analysis 
-----------------
 Total Months: 86
 Total: $38382578
 Average Change: -2315.12
