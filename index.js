@@ -88,8 +88,13 @@ var finances = [
 ];
 
 // Total Months
+var total = 0;
 
+for (var i = 0; i < finances.length; i++) {
+total++;
+}
 
+console.log("Total number of Months: " + total);
 
 // Total
 var total = 0;
