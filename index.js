@@ -91,10 +91,11 @@ var finances = [
 var total = 0;
 
 for (var i = 0; i < finances.length; i++) {
-total++;
+  total++;
 }
 
 console.log("Total number of Months: " + total);
+
 
 // Total
 var total = 0;
@@ -104,3 +105,26 @@ for (var i = 0; i < finances.length; i++) {
  }
  
  console.log("Total: $" + total);
+
+
+ // Average Change
+ var profit = 0;
+ var loss = 0;
+
+ for (var i = 0; i < finances.length; i++) {
+     total += finances[i][1];
+ }
+     if(i > 0) {
+      var previous_month = finances[i-1]
+
+      if(previous_month < finances[i]) {
+         profit += (finances[i]-previous_month)
+      } else {
+         loss += (previous_month - finances[i])
+      }
+ }
+ 
+ console.log(previous_month);
+
+
+
