@@ -1,5 +1,5 @@
 ## Console-Finances
 Used JavaScript to work out dataset.
 
-Deployment
+## Deployment
 To deploy this project:
