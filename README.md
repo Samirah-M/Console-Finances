@@ -12,5 +12,7 @@ Use JavaScript code to analyse the records to calculate each of the following:
 
 - Track what the total change in profits is from month to month and then find the average.
 
-## Deployment
-To deploy this project: https://samirah-m.github.io/Console-Finances/
+## Live link:
+```
+https://samirah-m.github.io/Console-Finances/
+```
