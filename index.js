@@ -1,8 +1,8 @@
-var finances = [
+const finances = [
   ['Jan-2010', 867884],
-  ['Feb-2010', 984655],
-  ['Mar-2010', 322013],
-  ['Apr-2010', -69417],
+  ['eb-2010', 984655],
+  ['-2010', 322013],
+  ['-2010', -69417],
   ['May-2010', 310503],
   ['Jun-2010', 522857],
   ['Jul-2010', 1033096],
@@ -87,44 +87,39 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-// Total Months
-var total = 0;
+console.log("Financial Analysis");
+console.log("----------------------------");
 
-for (var i = 0; i < finances.length; i++) {
-  total++;
+const totalMonths = finances.length;
+console.log(`Total Months: ${totalMonths}`);
+
+let totalProfitLoss = 0;
+for (const [, profitLoss] of finances) {
+  totalProfitLoss += profitLoss;
 }
+console.log(`Total: $${totalProfitLoss}`);
 
-console.log("Total number of Months: " + total);
+let previousProfitLoss = 0;
+let totalMonthlyChanges = 0;
+for (const [, profitLoss] of finances) {
+  const monthlyChange = profitLoss - previousProfitLoss;
+  totalMonthlyChanges += monthlyChange;
+  previousProfitLoss = profitLoss;
+}
+const averageMonthlyChange = totalMonthlyChanges / (totalMonths - 1);
+console.log(`Average Change: $${averageMonthlyChange.toFixed(2)}`);
 
-
-// Total
-var total = 0;
-
-for (var i = 0; i < finances.length; i++) {
-  total += finances[i][1];
- }
- 
- console.log("Total: $" + total);
-
-
- // Average Change
- var profit = 0;
- var loss = 0;
-
- for (var i = 0; i < finances.length; i++) {
-     total += finances[i][1];
- }
-     if(i > 0) {
-      var previous_month = finances[i-1]
-
-      if(previous_month < finances[i]) {
-         profit += (finances[i]-previous_month)
-      } else {
-         loss += (previous_month - finances[i])
-      }
- }
- 
- console.log(previous_month);
-
-
-
+let greatestIncrease = { date: "", profitLoss: 0 };
+let greatestDecrease = { date: "", profitLoss: 0 };
+for (const [date, profitLoss] of finances) {
+  const monthlyChange = profitLoss - previousProfitLoss;
+  if (monthlyChange > greatestIncrease.profitLoss) {
+    greatestIncrease = { date, profitLoss: monthlyChange };
+  }
+  if (monthlyChange < greatestDecrease.profitLoss || greatestDecrease.profitLoss === 0) {
+    greatestDecrease = { date, profitLoss: monthlyChange };
+  }
+  previousProfitLoss = profitLoss;
+}
+console.log(`Greatest Increase in Profits/Losses: ${greatestIncrease.date} ($${greatestIncrease.profitLoss})`);
+console.log(`Greatest Decrease in Profits/Losses: ${greatestDecrease.date} ($${greatestDecrease.profitLoss})`);
