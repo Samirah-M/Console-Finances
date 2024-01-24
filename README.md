@@ -1,8 +1,9 @@
-## Console-Finances
+<h1 align="center">Welcome to Console-Finances 👋</h1>
+<p>
+</p>
 
-Implement JavaScript code for analyzing the financial records of a company. A dataset given composed of arrays with two fields: Date and Profit/Losses.
-
-Use JavaScript code to analyse the records to calculate each of the following:
+> Implement JavaScript code for analyzing the financial records of a company. A dataset given composed of arrays with two fields: Date and Profit/Losses.
+> Use JavaScript code to analyse the records to calculate each of the following:
 
 - The total number of months included in the dataset.
 
@@ -19,3 +20,10 @@ Use JavaScript code to analyse the records to calculate each of the following:
 ```
 https://samirah-m.github.io/Console-Finances/
 ```
+## Author
+
+👤 **Samirah-M**
+
+* Github: [@Samirah-M](https://github.com/Samirah-M)
+
+***
